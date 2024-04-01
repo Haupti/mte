@@ -54,9 +54,17 @@ enum AnsiiEscape {
   colorDefaultBG("$_esc[1;49m"),
   colorReset("$_esc[1;0m"),
   enableLineWrapping("$_esc[=7h"),
-  disableLineWrapping("$_esc[=7l");
+  disableLineWrapping("$_esc[=7l"),
+  eraseScreen("$_esc[2J"),
+  eraseCursorToEnd("$_esc[0J"),
+  eraseCursorToStart("$_esc[1J");
+
 
   const AnsiiEscape(this.key);
 
   final String key;
+}
+
+class AnsiiEscapeBuilder {
+  static String cursorToPos(int x, int y) => "$_esc[$y;${x}H$_esc[$y;${x}f";
 }

@@ -1,25 +1,27 @@
 import 'package:mte/term/escapes.dart';
 
-String blue(String str) {
-  return "${AnsiiEscape.colorBlueFG}$str${AnsiiEscape.colorDefaultFG}";
-}
+class Colored {
+  static String blue(String str) {
+    return "${AnsiiEscape.colorBlueFG.key}$str${AnsiiEscape.colorDefaultFG.key}";
+  }
 
-String blueBg(String str) {
-  return "${AnsiiEscape.colorBlueBG}$str${AnsiiEscape.colorDefaultBG}";
-}
+  static String blueBg(String str) {
+    return "${AnsiiEscape.colorBlueBG.key}$str${AnsiiEscape.colorDefaultBG.key}";
+  }
 
-String red(String str) {
-  return "${AnsiiEscape.colorRedFG}$str${AnsiiEscape.colorDefaultFG}";
-}
+  static String red(String str) {
+    return "${AnsiiEscape.colorRedFG.key}$str${AnsiiEscape.colorDefaultFG.key}";
+  }
 
-String redBg(String str) {
-  return "${AnsiiEscape.colorRedBG}$str${AnsiiEscape.colorDefaultBG}";
-}
+  static String redBg(String str) {
+    return "${AnsiiEscape.colorRedBG.key}$str${AnsiiEscape.colorDefaultBG.key}";
+  }
 
-String green(String str) {
-  return "${AnsiiEscape.colorGreenFG}$str${AnsiiEscape.colorDefaultFG}";
-}
+  static String green(String str) {
+    return "${AnsiiEscape.colorGreenFG.key}$str${AnsiiEscape.colorDefaultFG.key}";
+  }
 
-String greenBg(String str) {
-  return "${AnsiiEscape.colorGreenBG}$str${AnsiiEscape.colorDefaultBG}";
+  static String greenBg(String str) {
+    return "${AnsiiEscape.colorGreenBG.key}$str${AnsiiEscape.colorDefaultBG.key}";
+  }
 }
